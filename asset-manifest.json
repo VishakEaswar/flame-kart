@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/flame-kart/static/css/main.aca68f5b.css",
-    "main.js": "/flame-kart/static/js/main.f91d4125.js",
+    "main.js": "/flame-kart/static/js/main.19c9676d.js",
     "index.html": "/flame-kart/index.html",
     "main.aca68f5b.css.map": "/flame-kart/static/css/main.aca68f5b.css.map",
-    "main.f91d4125.js.map": "/flame-kart/static/js/main.f91d4125.js.map"
+    "main.19c9676d.js.map": "/flame-kart/static/js/main.19c9676d.js.map"
   },
   "entrypoints": [
     "static/css/main.aca68f5b.css",
-    "static/js/main.f91d4125.js"
+    "static/js/main.19c9676d.js"
   ]
 }
