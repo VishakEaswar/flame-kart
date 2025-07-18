@@ -148,7 +148,7 @@ const NavBar = () => {
               variant="overline"
               sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.1rem" } }}
             >
-              Home
+              Home 
             </Typography>
           </Box>
 
