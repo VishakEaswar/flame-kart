@@ -35,7 +35,7 @@ const ProductView = () => {
 
   useEffect(() => {
     if (productId) {
-      axios.get("/products.json").then((res) => {
+      axios.get(`${process.env.PUBLIC_URL}/products.json`).then((res) => {
         const found = res.data.find((p) => p.id === productId);
         setProduct(found);
       });

@@ -18,7 +18,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+// import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export const HomePage = () => {
@@ -35,7 +35,7 @@ export const HomePage = () => {
 
   // Fetch unique categories
   useEffect(() => {
-    fetch("/products.json")
+    fetch(`${process.env.PUBLIC_URL}/products.json`)
       .then((res) => res.json())
       .then((data) => {
         const unique = Array.from(new Set(data.map((item) => item.category)));
@@ -86,7 +86,7 @@ export const HomePage = () => {
         sx={{
           minHeight: "100vh",
           width: "100%",
-          backgroundImage: `url('/bg.jpg')`,
+          backgroundImage: `url('${process.env.PUBLIC_URL}/bg.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

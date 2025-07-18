@@ -54,7 +54,7 @@ const ProductPage = forwardRef((props, ref) => {
   }, [location.state?.category]);
 
   useEffect(() => {
-    fetch("/products.json")
+    fetch(`${process.env.PUBLIC_URL}/products.json`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
