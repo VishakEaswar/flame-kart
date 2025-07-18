@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/flame-kart/static/css/main.aca68f5b.css",
+    "main.js": "/flame-kart/static/js/main.cbe0dffc.js",
+    "index.html": "/flame-kart/index.html",
+    "main.aca68f5b.css.map": "/flame-kart/static/css/main.aca68f5b.css.map",
+    "main.cbe0dffc.js.map": "/flame-kart/static/js/main.cbe0dffc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aca68f5b.css",
+    "static/js/main.cbe0dffc.js"
+  ]
+}
