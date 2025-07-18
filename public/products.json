@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Formal Shirt sky blue",
+    "price": 1299,
+    "image": "https://tse1.mm.bing.net/th/id/OIP.7DS0_sUwzhdMblbEYpCX3QHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "category": "Formal Shirt",
+    "rating": 4.5,
+    "description": "A classic sky blue formal shirt perfect for office and formal events."
+  },
+  {
+    "id": 2,
+    "name": "Formal Pant Navy",
+    "price": 1499,
+    "image": "https://tse1.mm.bing.net/th/id/OIP.ro5o7JZ1-jpB4P_zXWpAZQHaLI?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "category": "Formal Pant",
+    "rating": 4.2,
+    "description": "Smart navy formal pants with a comfortable fit and professional look."
+  },
+  {
+    "id": 3,
+    "name": "Casual Shoe Blue",
+    "price": 2499,
+    "image": "https://tse2.mm.bing.net/th/id/OIP.11EN4mTrRk27Wo_3OjnvbQHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "category": "Casual Shoe",
+    "rating": 4.4,
+    "description": "Trendy blue casual shoes that blend comfort with style."
+  },
+  {
+    "id": 4,
+    "name": "Casual Shirt Blue",
+    "price": 899,
+    "image": "https://cdn.shopify.com/s/files/1/0981/8178/files/tone-on-tone-dressing-blue-oxford-shirt.jpg?5470127182368086585",
+    "category": "Casual Shirt",
+    "rating": 3.7,
+    "description": "Lightweight and stylish blue shirt ideal for casual wear."
+  },
+  {
+    "id": 5,
+    "name": "Formal Shirt Dark Blue",
+    "price": 1399,
+    "image": "https://snapy.pk/wp-content/uploads/2021/01/navy-blue-formal-shirt-d.jpg",
+    "category": "Formal Shirt",
+    "rating": 4.3,
+    "description": "Dark blue formal shirt made with premium fabric for all-day comfort."
+  },
+  {
+    "id": 6,
+    "name": "Formal Pant Light Blue",
+    "price": 1599,
+    "image": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1745336/2017/4/7/11491556262151-INVICTUS-Men-Blue-Solid-Slim-Fit-Formal-Trousers-5611491556261897-1.jpg",
+    "category": "Formal Pant",
+    "rating": 5,
+    "description": "Tailored light blue formal pants, perfect for a polished look."
+  },
+  {
+    "id": 7,
+    "name": "Formal Shoe Dark Blue",
+    "price": 2299,
+    "image": "https://images.bonanzastatic.com/afu/images/56ec/9afd/665e_7509109314/WhatsApp_Image_2018-11-10_at_11.12.12__3_.jpeg",
+    "category": "Formal Shoe",
+    "rating": 4.6,
+    "description": "Elegant dark blue formal shoes crafted for durability and class."
+  },
+  {
+    "id": 8,
+    "name": "Casual Checked Shirt Light Blue",
+    "price": 999,
+    "image": "https://www.peacocks.co.uk/dw/image/v2/BKQD_PRD/on/demandware.static/-/Sites-pck-uk-master-catalog/default/dwe12a7e9f/Assets/4604719_C01_base_01/hi-res/1/2/d/7/12d71bfaaa15f5247b706693da9663c37b80dfbc_4604719_C01_base_01.jpg",
+    "category": "Casual Shirt",
+    "rating": 3.9,
+    "description": "Stylish light blue checked shirt great for casual outings."
+  },
+  {
+    "id": 9,
+    "name": "Formal Shirt Blue",
+    "price": 1199,
+    "image": "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/8905572335203/hq8TwBBAdKE-1.jpg",
+    "category": "Formal Shirt",
+    "rating": 4.0,
+    "description": "Classic blue formal shirt with modern tailoring and a clean finish."
+  },
+  {
+    "id": 10,
+    "name": "Formal Checked Pant Navy",
+    "price": 1699,
+    "image": "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/productimage/2020/11/28/034cb128-1180-43a8-b09b-70f210251b241606564903100-1.jpg",
+    "category": "Formal Pant",
+    "rating": 4.3,
+    "description": "Navy checked formal pants for a sophisticated professional style."
+  },
+  {
+    "id": 11,
+    "name": "Formal Watch Blue",
+    "price": 2599,
+    "image": "https://5.imimg.com/data5/SELLER/Default/2021/11/KV/NS/VR/141862336/men-formal-wrist-watches-500x500.jpeg",
+    "category": "Formal Watch",
+    "rating": 4.7,
+    "description": "Elegant blue dial watch for formal occasions and daily wear."
+  },
+  {
+    "id": 12,
+    "name": "Jeans Shirt Blue",
+    "price": 799,
+    "image": "https://tse4.mm.bing.net/th/id/OIP.DPYjWl6qn5TocbqqTzj9VAHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+    "category": "Jeans Shirt",
+    "rating": 3.8,
+    "description": "Casual blue jeans shirt for a relaxed and rugged appearance."
+  },
+  {
+    "id": 13,
+    "name": "Formal Shirt Striped",
+    "price": 1499,
+    "image": "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/20109434/2022/9/21/224358e7-28b0-4f61-b056-146ef546d5ce1663754637945ParkAvenueBlueStripeSlimFitFormalShirtsForMen1.jpg",
+    "category": "Formal Shirt",
+    "rating": 4.0,
+    "description": "Striped formal shirt offering a stylish and professional look."
+  },
+  {
+    "id": 14,
+    "name": "Jeans Pant Blue",
+    "price": 1799,
+    "image": "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/1857402/2017/4/18/11492493399621-Peter-England-Men-Jeans-481492493399489-1.jpg",
+    "category": "Jeans Pant",
+    "rating": 4.4,
+    "description": "Stylish blue jeans pant with a modern slim fit design."
+  },
+  {
+    "id": 15,
+    "name": "Jeans Pant Light Blue",
+    "price": 2399,
+    "image": "https://i.pinimg.com/originals/af/d0/41/afd041d86e5ddacdc6c20411ee2fb31d.jpg",
+    "category": "Jeans Pant",
+    "rating": 4.5,
+    "description": "Light blue denim with a relaxed fit and premium feel."
+  },
+  {
+    "id": 16,
+    "name": "Checked Shirt Blue",
+    "price": 899,
+    "image": "https://assets.myntassets.com/h_200,w_200,c_fill,g_auto/h_1440,q_100,w_1080/v1/assets/images/8469957/2019/2/26/1f0038c3-3126-4af3-80aa-d9dee734f42d1551176119814-Roadster-Men-Blue--White-Regular-Fit-Checked-Casual-Shirt-50-1.jpg",
+    "category": "Casual Shirt",
+    "rating": 2.0,
+    "description": "A blue and white checked shirt perfect for day-to-day fashion."
+  },
+  {
+    "id": 17,
+    "name": "Formal Checked Shirt",
+    "price": 1299,
+    "image": "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/N19E_44/0EHcCYyiJf-1.jpg",
+    "category": "Formal Shirt",
+    "rating": 4.1,
+    "description": "Smart checked shirt designed for formal meetings and office."
+  },
+  {
+    "id": 18,
+    "name": "Formal Pant Light Blue Checked",
+    "price": 1399,
+    "image": "https://www.rw-co.com/on/demandware.static/-/Sites-Rwco-master-catalog/default/dw2a09a575/images/xlarge/rwco_478717_432_0.jpg",
+    "category": "Formal Pant",
+    "rating": 4.0,
+    "description": "Light blue formal pants with subtle checks for extra detail."
+  },
+  {
+    "id": 19,
+    "name": "Formal Shoe Monk Strap",
+    "price": 2699,
+    "image": "https://th.bing.com/th/id/R.bfb4d62398b02550435a46463272c2c1?rik=35Ve8R5CJouQ%2fA&riu=http%3a%2f%2fgucinari.co.uk%2fwp-content%2fuploads%2f2015%2f02%2fJZ05691_NAVY_1.jpg&ehk=UZmh3wOTs5LPR13JB2TeBbudsA9HbU7SEaQDHQ2Vi%2bU%3d&risl=&pid=ImgRaw&r=0",
+    "category": "Formal Shoe",
+    "rating": 4.5,
+    "description": "Sophisticated monk strap shoes for a polished formal look."
+  },
+  {
+    "id": 20,
+    "name": "Men's Full Suit Set",
+    "price": 999,
+    "image": "https://i5.walmartimages.com/asr/ce590b9b-405f-4948-af6a-a817cd66f9cd.4e404934c089dc5fabeb4616f32245e6.jpeg",
+    "category": "Full Suit Set",
+    "rating": 3.9,
+    "description": "Complete men's suit set perfect for business or formal occasions."
+  }
+]
