@@ -11,11 +11,11 @@ const Footer = () => {
         mt: 4,
         backgroundColor: "#f5f5f5",
         borderTop: "1px solid #ddd",
-        height:'100px'
+        height: "100px",
       }}
     >
-      <Typography variant="h6" color="text.secondary">
-        Made with <span style={{ color: "red" }}>❤️</span> by Vishak KV
+      <Typography variant='overline' color="text.secondary" sx={{fontSize:'15px'}}>
+        Made with <span style={{ color: "red" }}>❤️</span> by Vishak K V
       </Typography>
     </Box>
   );

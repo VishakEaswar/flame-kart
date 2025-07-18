@@ -22,7 +22,7 @@ const ProductPage = forwardRef((props, ref) => {
   const initialCategory = location.state?.category || "all";
   const [priceRange, setPriceRange] = useState([0, 0]);
   const [maxPrice, setMaxPrice] = useState(0);
-const [rating, setRating] = useState(5); // 0 to 5 stars
+  const [rating, setRating] = useState(5); // 0 to 5 stars
 
   const [products, setProducts] = useState([]);
   const [wishlist, setWishlist] = useState([]);
@@ -96,21 +96,20 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
   };
 
   const getFilteredProducts = () =>
-  products.filter((p) => {
-    const matchesQuery = query ? p.name.toLowerCase().includes(query) : true;
-    const matchesCategory = currentCategory === "all" ? true : p.category === currentCategory;
-    const matchesPrice = p.price >= priceRange[0] && p.price <= priceRange[1];
-    const matchesRating = p.rating <= rating;
-    return matchesQuery && matchesCategory && matchesPrice && matchesRating;
-  });
-
+    products.filter((p) => {
+      const matchesQuery = query ? p.name.toLowerCase().includes(query) : true;
+      const matchesCategory =
+        currentCategory === "all" ? true : p.category === currentCategory;
+      const matchesPrice = p.price >= priceRange[0] && p.price <= priceRange[1];
+      const matchesRating = p.rating <= rating;
+      return matchesQuery && matchesCategory && matchesPrice && matchesRating;
+    });
 
   useEffect(() => {
     if (products.length === 0) return;
     const filtered = getFilteredProducts();
     setFilteredProducts(filtered);
- }, [products, query, currentCategory, priceRange, rating]);
-
+  }, [products, query, currentCategory, priceRange, rating]);
 
   const getSortedProducts = () => {
     const filtered = [...filteredProducts];
@@ -134,7 +133,7 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
     <Box ref={ref} sx={{ p: 4, bgcolor: "whitesmoke" }}>
       <Grid container spacing={3}>
         {/* Filter / Sort Section */}
-        <Grid size={{ xs: 12,sm:3, md: 2, }}>
+        <Grid size={{ xs: 12, sm: 3, md: 3, lg: 2 }}>
           <Box sx={{ position: "sticky", top: 20 }}>
             <TextField
               select
@@ -183,13 +182,20 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
               valueLabelDisplay="auto"
               sx={{ mb: 2 }}
             />
-
           </Box>
         </Grid>
 
         {/* Product Cards Section */}
-        <Grid size={{ xs: 12,sm:9, md: 10 }}>
-          <Grid container spacing={3}>
+        <Grid size={{ xs: 12, sm: 9, md: 9, lg: 10 }}>
+          <Grid
+            container
+            spacing={3}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             {getSortedProducts().map((product) => (
               <Grid size={{ xs: 12, sm: 6, md: 5, lg: 3 }} key={product.id}>
                 <Card
@@ -198,11 +204,13 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
                       state: { productId: product.id },
                     })
                   }
-                  sx={{ cursor: "pointer",height: 600,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  alignItems: "center",
+                  sx={{
+                    cursor: "pointer",
+                    height: 600,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
                   <CardMedia
@@ -224,17 +232,43 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
                       textAlign: "center",
                     }}
                   >
-                    <Typography variant="h6" 
-                    sx={{ fontSize: { xs: '1rem', sm: '1.1rem', md: '1.0rem', lg: '1.0rem' }}}>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontSize: {
+                          xs: "1rem",
+                          sm: "1.1rem",
+                          md: "1.0rem",
+                          lg: "1.0rem",
+                        },
+                      }}
+                    >
                       {product.name}
                     </Typography>
 
-                    <Typography variant="h6" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' },}}>₹{product.price}</Typography>
-                    <Typography variant="body2" sx={{ fontSize: { xs: '0.8rem', sm: '0.9rem' }, color: "text.secondary" }}>
+                    <Typography
+                      variant="h6"
+                      sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}
+                    >
+                      ₹{product.price}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        fontSize: { xs: "0.8rem", sm: "0.9rem" },
+                        color: "text.secondary",
+                      }}
+                    >
                       Rating: ⭐ {product.rating}
                     </Typography>
 
-                    <Box display="flex" gap={1} mt={2} justifyContent="center" flexWrap="wrap">
+                    <Box
+                      display="flex"
+                      gap={1}
+                      mt={2}
+                      justifyContent="center"
+                      flexWrap="wrap"
+                    >
                       <Button
                         variant="outlined"
                         size="large"
@@ -244,14 +278,20 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
                             : "success"
                         }
                         startIcon={
-                          wishlist.find((item) => item.id === product.id) ? <DeleteIcon /> : null
+                          wishlist.find((item) => item.id === product.id) ? (
+                            <DeleteIcon />
+                          ) : null
                         }
                         onClick={(e) => {
                           e.stopPropagation();
                           toggleWishlist(product);
                         }}
                         sx={{
-                          fontSize: { xs: "0.7rem", sm: "0.8rem", md: "0.9rem" },
+                          fontSize: {
+                            xs: "0.7rem",
+                            sm: "0.8rem",
+                            md: "0.9rem",
+                          },
                           px: { xs: 1, sm: 2 },
                           py: { xs: 0.5, sm: 1 },
                           minWidth: { xs: 120, sm: 150 },
@@ -270,16 +310,22 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
                             : "primary"
                         }
                         startIcon={
-                          cart.find((item) => item.id === product.id)
-                            ? <DeleteIcon />
-                            : <ShoppingCartIcon />
+                          cart.find((item) => item.id === product.id) ? (
+                            <DeleteIcon />
+                          ) : (
+                            <ShoppingCartIcon />
+                          )
                         }
                         onClick={(e) => {
                           e.stopPropagation();
                           toggleCart(product);
                         }}
                         sx={{
-                          fontSize: { xs: "0.7rem", sm: "0.8rem", md: "0.9rem" },
+                          fontSize: {
+                            xs: "0.7rem",
+                            sm: "0.8rem",
+                            md: "0.9rem",
+                          },
                           px: { xs: 1, sm: 2 },
                           py: { xs: 0.5, sm: 1 },
                           minWidth: { xs: 100, sm: 130 },
@@ -290,8 +336,6 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
                           : "Add to Cart"}
                       </Button>
                     </Box>
-
-
                   </CardContent>
                 </Card>
               </Grid>
@@ -304,211 +348,3 @@ const [rating, setRating] = useState(5); // 0 to 5 stars
 });
 
 export default ProductPage;
-
-// import React, { useEffect, useState, forwardRef } from 'react';
-// import {
-//   Box,
-//   Card,
-//   CardContent,
-//   CardMedia,
-//   Typography,
-//   Button,
-//   Grid,
-//   MenuItem,
-//   TextField,
-// } from '@mui/material';
-// import { useLocation } from 'react-router-dom';
-
-// const ProductPage = forwardRef((props, ref) => {
-//   const location = useLocation();
-//   const query = location.state?.searchQuery?.toLowerCase() || "";
-//   const category = location.state?.category || "all";
-// const [ratingFilter, setRatingFilter] = useState(0);
-// const [currentCategory, setCurrentCategory] = useState(location.state?.category || "all");
-// const [filteredProducts, setFilteredProducts] = useState([]);
-
-//   const [products, setProducts] = useState([]);
-//   const [wishlist, setWishlist] = useState([]);
-//   const [sort, setSort] = useState("");
-
-// useEffect(() => {
-//   if (location.state?.category) {
-//     setCurrentCategory(location.state.category);
-//   }
-// }, [location.state?.category]);
-
-//   useEffect(() => {
-//     fetch('/products.json')
-//       .then((res) => res.json())
-//       .then((data) => setProducts(data));
-
-//     const storedWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-//     setWishlist(storedWishlist);
-//   }, []);
-//   const [cart, setCart] = useState([]);
-
-// useEffect(() => {
-//   // Load cart from localStorage
-//   const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-//   setCart(storedCart);
-// }, []);
-
-// const toggleCart = (product) => {
-//   let updated;
-//   if (cart.find((item) => item.id === product.id)) {
-//     updated = cart.filter((item) => item.id !== product.id);
-//   } else {
-//     updated = [...cart, product];
-//   }
-//   setCart(updated);
-//   localStorage.setItem('cart', JSON.stringify(updated));
-
-//   // Optional event dispatch
-//   window.dispatchEvent(new Event("cartUpdated"));
-// };
-
-//  const toggleWishlist = (product) => {
-//   let updated;
-//   if (wishlist.find((item) => item.id === product.id)) {
-//     updated = wishlist.filter((item) => item.id !== product.id);
-//   } else {
-//     updated = [...wishlist, product];
-//   }
-//   setWishlist(updated);
-//   localStorage.setItem('wishlist', JSON.stringify(updated));
-
-//   // 🔥 Fire event to notify other components
-//   window.dispatchEvent(new Event("wishlistUpdated"));
-// };
-
-//    const getFilteredProducts = () => {
-//   return products.filter((p) => {
-//     const matchesQuery = query ? p.name.toLowerCase().includes(query) : true;
-//    const matchesCategory = currentCategory === 'all' ? true : p.category === currentCategory;
-//     const matchesRating = ratingFilter ? Math.floor(p.rating) >= ratingFilter : true;
-
-//     return matchesQuery && matchesCategory && matchesRating;
-//   });
-// };
-// useEffect(() => {
-//   const filtered = getFilteredProducts();
-//   setFilteredProducts(filtered);
-// }, [products, query, ratingFilter, currentCategory]); // ✅ Removed searchTerm & priceRange
-
-// const getSortedProducts = () => {
-//   const filtered = [...filteredProducts]; // shallow copy to avoid mutation
-//   switch (sort) {
-//     case "price-asc":
-//       return filtered.sort((a, b) => a.price - b.price);
-//     case "price-desc":
-//       return filtered.sort((a, b) => b.price - a.price);
-//     case "rating":
-//       return filtered.sort((a, b) => b.rating - a.rating);
-//     case "name-asc":
-//       return filtered.sort((a, b) => a.name.localeCompare(b.name));
-//     case "name-desc":
-//       return filtered.sort((a, b) => b.name.localeCompare(a.name));
-//     default:
-//       return filtered;
-//   }
-// };
-
-//   return (
-//     <Box ref={ref} sx={{ p: 4, bgcolor: 'whitesmoke' }}>
-//   <Grid container spacing={3}>
-//     {/* Left: Filter / Sort Section */}
-//     <Grid size={{xs:12,md:2}} >
-//       <Box sx={{ position: 'sticky', top: 20 }}>
-//       <TextField
-//         select
-//         label="Sort By"
-//         fullWidth
-//         value={sort}
-//         onChange={(e) => setSort(e.target.value)}
-//         sx={{ mb: 2 }}
-//       >
-//         <MenuItem value="">None</MenuItem>
-//         <MenuItem value="price-asc">Price: Low to High</MenuItem>
-//         <MenuItem value="price-desc">Price: High to Low</MenuItem>
-//         <MenuItem value="rating">Rating</MenuItem>
-//         <MenuItem value="name-asc">Name: A-Z</MenuItem>
-//         <MenuItem value="name-desc">Name: Z-A</MenuItem>
-//       </TextField>
-
-//       {/* <Typography variant="subtitle1" sx={{ mb: 1 }}>
-//         Filter by Rating
-//       </Typography>
-//       <Rating
-//         name="rating-filter"
-//         value={ratingFilter}
-//         onChange={(e, newValue) => setRatingFilter(newValue)}
-//       /> */}
-//     </Box>
-
-//     </Grid>
-
-//     {/* Right: Product List */}
-//     <Grid size={{xs:12,md:10}}>
-//       <Grid container spacing={3}>
-//         {getSortedProducts().map((product) => (
-//           <Grid size={{xs:12, sm:6, md:4,lg:3}} key={product.id}>
-//             <Card >
-//               <CardMedia
-//                 component="img"
-//                 height="200"
-//                 image={product.image}
-//                 alt={product.name}
-//                 sx={{objectFit:'cover'}}
-//               />
-//               <CardContent sx={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-//                 <Typography variant="h6">{product.name}</Typography>
-//                 <Typography variant="body2">₹{product.price}</Typography>
-//                 {/* <Typography variant="body2" color="text.secondary">
-//                   Category: {product.category}
-//                 </Typography> */}
-//                 <Typography variant="body2">Rating :⭐ {product.rating}</Typography>
-
-//                 <Box display="flex" gap={1} mt={2}>
-//                   <Button
-//                     variant="contained"
-//                     color={
-//                       wishlist.find((item) => item.id === product.id)
-//                         ? 'error'
-//                         : 'primary'
-//                     }
-//                     onClick={() => toggleWishlist(product)}
-//                   >
-//                     {wishlist.find((item) => item.id === product.id)
-//                       ? 'Remove from Wishlist'
-//                       : 'Add to Wishlist'}
-//                   </Button>
-
-//                   <Button
-//                     variant="contained"
-//                     color={
-//                       cart.find((item) => item.id === product.id)
-//                         ? 'error'
-//                         : 'primary'
-//                     }
-//                     onClick={() => toggleCart(product)}
-//                   >
-//                     {cart.find((item) => item.id === product.id)
-//                       ? 'Remove from Cart'
-//                       : 'Add to Cart'}
-//                   </Button>
-//                 </Box>
-//               </CardContent>
-//             </Card>
-//           </Grid>
-//         ))}
-//       </Grid>
-//     </Grid>
-//   </Grid>
-// </Box>
-
-//   );
-// });
-
-// export default ProductPage;
-
-// size={{xs:12 ,sm:6, md:4, lg:3}}

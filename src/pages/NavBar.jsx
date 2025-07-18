@@ -52,10 +52,10 @@ const NavBar = () => {
       {/* Top Navbar */}
       <Box
         sx={{
-          height: "120px",
+          height: { xs: "80px", sm: "100px", md: "100px", lg: "100px" },
           width: "100%",
-          // bgcolor: "navy",
-          background: 'linear-gradient(90deg,rgba(0, 0, 84, 1) 0%, rgba(0, 0, 161, 1) 69%)',
+          background:
+            "linear-gradient(90deg,rgba(0, 0, 84, 1) 0%, rgba(0, 0, 161, 1) 69%)",
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           justifyContent: "space-between",
@@ -69,11 +69,11 @@ const NavBar = () => {
         <Typography
           variant="overline"
           sx={{
-            fontSize: { xs: "24px", sm: "32px", md: "36px" },
+            fontSize: { xs: "1rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" },
             fontFamily: "sans-serif",
-            color: "white",
             letterSpacing: 2,
             textAlign: { xs: "center", sm: "left" },
+            color: "whitesmoke",
           }}
         >
           BLUE SHADE
@@ -105,7 +105,10 @@ const NavBar = () => {
             onKeyDown={() => setDrawerOpen(false)}
           >
             <List>
-              <ListItem button onClick={() => navigate("/", { state: { fromCart: true } })}>
+              <ListItem
+                button
+                onClick={() => navigate("/", { state: { fromCart: true } })}
+              >
                 <ListItemIcon>
                   <HomeOutlinedIcon />
                 </ListItemIcon>
@@ -143,19 +146,20 @@ const NavBar = () => {
             <HomeOutlinedIcon sx={{ mr: 1 }} />
             <Typography
               variant="overline"
-              sx={{ fontSize: { xs: 14, sm: 18 } }}
+              sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.1rem" } }}
             >
               Home
             </Typography>
           </Box>
+
           <Box
             sx={{ cursor: "pointer", display: "flex", alignItems: "center" }}
             onClick={() => navigate("/wishlist")}
           >
             <FavoriteBorderIcon sx={{ mr: 1 }} />
             <Typography
-              variant="overline"
-              sx={{ fontSize: { xs: 14, sm: 18 } }}
+              variant="body2"
+              sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.1rem" } }}
             >
               Wishlist ({wishlistCount})
             </Typography>
@@ -167,8 +171,8 @@ const NavBar = () => {
           >
             <ShoppingCartIcon sx={{ mr: 1 }} />
             <Typography
-              variant="overline"
-              sx={{ fontSize: { xs: 14, sm: 18 } }}
+              variant="body2"
+              sx={{ fontSize: { xs: "0.75rem", sm: "1rem", md: "1.1rem" } }}
             >
               Cart ({cartCount})
             </Typography>
